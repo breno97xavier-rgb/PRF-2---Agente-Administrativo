@@ -489,90 +489,18 @@ export default function App() {
         </div>
       </section>
 
-      {/* Section 8: Combo Aprovação (Blue Box) */}
-      <section className="py-20 px-4 bg-white">
-        <div className="max-w-5xl mx-auto bg-[#001a33] rounded-[2rem] p-8 md:p-16 text-white relative overflow-hidden">
-          <div className="absolute top-0 right-0 p-8">
-            <div className="bg-yellow-400 text-black text-[10px] font-black px-3 py-1 rounded-full rotate-12">OFERTA DE LANÇAMENTO</div>
-          </div>
-          
-          <div className="space-y-12 relative z-10">
-            <div className="space-y-4">
-              <h2 className="text-3xl md:text-4xl font-black leading-tight">
-                Turbine Seus Resultados com o <br />
-                <span className="text-yellow-400">Combo Aprovação</span>
-              </h2>
-              <p className="text-gray-400 text-sm flex items-center gap-2">
-                <Clock className="w-4 h-4 text-yellow-400" /> No momento, <span className="text-white font-bold">8 pessoas</span> estão comprando o Combo Aprovação.
-              </p>
-            </div>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-4">
-              {[
-                "Apostila teórica completa",
-                "Questões Gabaritadas Inéditas",
-                "Mapas Mentais Esquematizados Exclusivos",
-                "Plataforma de Estudos Personalizada",
-                "Simulados Esquematizados",
-                "Revisão Esquematizada Completa",
-                "Redação Discursiva para Concursos",
-                "Como Estudar com PDFs",
-                "Controle Emocional - Disciplina de Ferro",
-                "Atualizações Prioritárias Periódicas",
-                "Guia de planejamento de estudos",
-                "Acesso vitalício",
-                "Suporte Vip 24h"
-              ].map((item, i) => (
-                <div key={i} className="flex items-center gap-3 text-sm">
-                  <CheckCircle2 className="w-5 h-5 text-yellow-400 flex-shrink-0" />
-                  {item}
-                </div>
-              ))}
-            </div>
-
-            <div className="bg-white/5 rounded-2xl p-8 border border-white/10 flex flex-col md:flex-row items-center gap-6">
-              <div className="w-20 h-20 bg-yellow-400 rounded-full flex items-center justify-center flex-shrink-0 shadow-lg">
-                <ShieldCheck className="w-10 h-10 text-[#001a33]" />
-              </div>
-              <div className="space-y-2 text-center md:text-left">
-                <h3 className="text-xl font-black">Risco Zero: 7 Dias de Garantia Incondicional</h3>
-                <p className="text-sm text-gray-400 leading-relaxed">
-                  Se em até 7 dias você achar que o material não é para você ou não gostar da organização, devolvemos 100% do seu dinheiro. Sem perguntas, sem burocracia, sem enrolação.
-                </p>
-              </div>
-            </div>
-
-            <div className="flex flex-wrap justify-center gap-8 pt-4 opacity-60 grayscale">
-              <div className="flex items-center gap-2 text-[10px] font-bold uppercase tracking-widest">
-                <ShieldCheck className="w-4 h-4" /> COMPRA SEGURA
-              </div>
-              <div className="flex items-center gap-2 text-[10px] font-bold uppercase tracking-widest">
-                <ShieldCheck className="w-4 h-4" /> PRIVACIDADE GARANTIDA
-              </div>
-              <div className="flex items-center gap-2 text-[10px] font-bold uppercase tracking-widest">
-                <ShieldCheck className="w-4 h-4" /> SATISFAÇÃO GARANTIDA
-              </div>
-            </div>
-            
-            <div className="text-center font-black text-sm tracking-widest text-yellow-400">
-              🚀 ENVIO IMEDIATO POR EMAIL E WHATSAPP
-            </div>
-          </div>
-        </div>
-      </section>
-
       {/* Section 9: Pricing */}
       <section id="planos" className="py-20 px-4 bg-gray-50">
         <div className="max-w-7xl mx-auto text-center space-y-16">
           <h2 className="text-4xl font-black text-[#001a33]">Escolha o Melhor para Você</h2>
           
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 items-stretch">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-stretch max-w-4xl mx-auto">
             {/* Plano Simples */}
             <div className="bg-white rounded-3xl p-8 border border-gray-200 flex flex-col shadow-sm">
               <div className="space-y-4 mb-8">
                 <h3 className="text-xl font-black text-[#001a33]">Plano Simples</h3>
                 <p className="text-gray-500 text-xs">Foco total na teoria completa do edital.</p>
-                <div className="text-3xl font-black text-[#001a33]">R$ 14,90</div>
+                <div className="text-3xl font-black text-[#001a33]">R$ 10,00</div>
               </div>
               <ul className="space-y-4 mb-12 text-left flex-grow">
                 <li className="flex items-center gap-2 text-xs text-gray-600"><CheckCircle2 className="w-4 h-4 text-blue-500" /> Apostila teórica completa</li>
@@ -586,66 +514,33 @@ export default function App() {
                 onClick={() => setActiveUpsell('simples')}
                 className="w-full py-4 px-6 border-2 border-gray-200 rounded-xl font-bold text-gray-500 hover:bg-gray-50 transition-colors uppercase text-xs text-center"
               >
-                COMPRAR POR R$ 14,90
+                COMPRAR POR R$ 10,00
               </button>
             </div>
 
-            {/* Plano Essencial */}
-            <div className="bg-white rounded-3xl p-8 border border-gray-200 flex flex-col shadow-sm">
+            {/* Plano Completo */}
+            <div className="bg-white rounded-3xl p-8 border-4 border-blue-600 flex flex-col shadow-xl relative scale-105 z-10">
+              <div className="absolute -top-4 left-1/2 -translate-x-1/2 bg-blue-600 text-white text-[10px] font-black px-4 py-1 rounded-full uppercase">O MAIS VENDIDO</div>
               <div className="space-y-4 mb-8">
-                <h3 className="text-xl font-black text-[#001a33]">Plano Essencial</h3>
+                <h3 className="text-xl font-black text-[#001a33]">Plano Completo</h3>
                 <p className="text-gray-500 text-xs">A preparação definitiva com bônus exclusivos. <br /><span className="text-red-500 font-bold uppercase">PROMOÇÃO SEMANAL</span></p>
-                <div className="text-3xl font-black text-[#001a33]">R$ 28,90</div>
+                <div className="text-3xl font-black text-[#001a33]">R$ 22,00</div>
               </div>
               <ul className="space-y-4 mb-12 text-left flex-grow">
                 <li className="flex items-center gap-2 text-xs text-gray-600"><CheckCircle2 className="w-4 h-4 text-blue-500" /> Apostila teórica completa</li>
                 <li className="flex items-center gap-2 text-xs text-gray-600"><CheckCircle2 className="w-4 h-4 text-blue-500" /> Questões Gabaritadas Inéditas</li>
                 <li className="flex items-center gap-2 text-xs text-gray-600"><CheckCircle2 className="w-4 h-4 text-blue-500" /> Mapas Mentais Esquematizados Exclusivos</li>
+                <li className="flex items-center gap-2 text-xs text-gray-600"><CheckCircle2 className="w-4 h-4 text-blue-500" /> Plataforma de Estudos Personalizada</li>
                 <li className="flex items-center gap-2 text-xs text-gray-600"><CheckCircle2 className="w-4 h-4 text-blue-500" /> Guia de planejamento de estudos</li>
                 <li className="flex items-center gap-2 text-xs text-gray-600"><CheckCircle2 className="w-4 h-4 text-blue-500" /> Atualizações constantes</li>
                 <li className="flex items-center gap-2 text-xs text-gray-600"><CheckCircle2 className="w-4 h-4 text-blue-500" /> Acesso vitalício</li>
               </ul>
-              <button 
-                onClick={() => setActiveUpsell('essencial')}
+              <a 
+                href="https://pay.cakto.com.br/hu2i4dp_760079"
                 className="w-full py-4 px-6 bg-blue-600 text-white rounded-xl font-bold hover:bg-blue-700 transition-colors uppercase text-xs shadow-lg shadow-blue-200 text-center"
               >
-                QUERO O PLANO ESSENCIAL
-              </button>
-            </div>
-
-            {/* Combo Aprovação */}
-            <div className="bg-white rounded-3xl p-8 border-4 border-yellow-400 flex flex-col shadow-xl relative scale-105 z-10">
-              <div className="absolute -top-4 left-1/2 -translate-x-1/2 bg-yellow-400 text-black text-[10px] font-black px-4 py-1 rounded-full uppercase">O MAIS VENDIDO</div>
-              <div className="space-y-4 mb-8">
-                <h3 className="text-xl font-black text-[#001a33]">Combo Aprovação</h3>
-                <p className="text-gray-500 text-xs">A preparação definitiva e completa. <br /><span className="text-red-500 font-bold uppercase">PROMOÇÃO SEMANAL</span></p>
-                <div className="text-4xl font-black text-[#001a33]">R$ 48,90 <span className="text-xs text-green-600 bg-green-100 px-2 py-0.5 rounded ml-2">MELHOR CUSTO</span></div>
-              </div>
-              <ul className="space-y-3 mb-12 text-left flex-grow">
-                {[
-                  "Apostila teórica completa",
-                  "Questões Gabaritadas Inéditas",
-                  "Mapas Mentais Esquematizados Exclusivos",
-                  "Plataforma de Estudos Personalizada",
-                  "Simulados Esquematizados",
-                  "Revisão Esquematizada Completa",
-                  "Redação Discursiva para Concursos",
-                  "Como Estudar com PDFs",
-                  "Controle Emocional - Disciplina de Ferro",
-                  "Atualizações Prioritárias Periódicas",
-                  "Guia de planejamento de estudos",
-                  "Acesso vitalício",
-                  "Suporte Vip 24h"
-                ].map((item, i) => (
-                  <li key={i} className="flex items-center gap-2 text-[10px] text-gray-600 font-medium">
-                    <CheckCircle2 className="w-3.5 h-3.5 text-green-500 flex-shrink-0" /> {item}
-                  </li>
-                ))}
-              </ul>
-              <a href="https://pay.cakto.com.br/34534kz" className="w-full py-4 px-6 bg-green-600 text-white rounded-xl font-black hover:bg-green-700 transition-colors uppercase text-sm shadow-lg shadow-green-200 text-center">
-                GARANTIR COMBO AGORA
+                QUERO O PLANO COMPLETO
               </a>
-              <p className="text-[10px] text-gray-400 mt-4 font-bold">ACESSO IMEDIATO E VITALÍCIO</p>
             </div>
           </div>
         </div>
@@ -775,26 +670,13 @@ export default function App() {
         isOpen={activeUpsell === 'simples'}
         onClose={() => setActiveUpsell(null)}
         title="🎉 Espere! Antes de finalizar sua compra..."
-        message="Você está quase garantindo a versão básica. Mas neste momento foi liberada para você uma condição especial do Plano Essencial PRF 2026."
-        oldPrice="R$ 28,90"
-        newPrice="R$ 22,90"
+        message="Você está quase garantindo a versão básica. Mas neste momento foi liberada para você uma condição especial do Plano Completo PRF 2026."
+        oldPrice="R$ 22,00"
+        newPrice="R$ 18,90"
         upgradeLink="https://pay.cakto.com.br/3cvnueu"
         basicLink="https://pay.cakto.com.br/37jhkgf"
-        upgradeText="Quero a promoção do Plano Essencial por R$ 22,90"
-        basicText="Continuar apenas com a versão básica de R$ 14,90"
-      />
-
-      <UpsellModal 
-        isOpen={activeUpsell === 'essencial'}
-        onClose={() => setActiveUpsell(null)}
-        title="🎉 Espere! Antes de finalizar sua compra..."
-        message="Você está quase garantindo o Plano Essencial. Mas neste momento foi liberada para você uma condição especial do Combo Aprovação PRF 2026."
-        oldPrice="R$ 48,90"
-        newPrice="R$ 39,90"
-        upgradeLink="https://pay.cakto.com.br/gxwvdsd"
-        basicLink="https://pay.cakto.com.br/hu2i4dp_760079"
-        upgradeText="Quero a promoção do Combo Aprovação por R$ 39,90"
-        basicText="Continuar apenas com o Plano Essencial de R$ 28,90"
+        upgradeText="Quero a promoção do Plano Completo por R$ 18,90"
+        basicText="Continuar apenas com a versão básica de R$ 10,00"
       />
     </div>
   );
