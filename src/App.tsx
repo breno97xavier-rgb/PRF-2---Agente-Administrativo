@@ -524,7 +524,7 @@ export default function App() {
               <div className="space-y-4 mb-8">
                 <h3 className="text-xl font-black text-[#001a33]">Plano Completo</h3>
                 <p className="text-gray-500 text-xs">A preparação definitiva com bônus exclusivos. <br /><span className="text-red-500 font-bold uppercase">PROMOÇÃO SEMANAL</span></p>
-                <div className="text-3xl font-black text-[#001a33]">R$ 22,00</div>
+                <div className="text-3xl font-black text-[#001a33]">R$ 26,00</div>
               </div>
               <ul className="space-y-4 mb-12 text-left flex-grow">
                 <li className="flex items-center gap-2 text-xs text-gray-600"><CheckCircle2 className="w-4 h-4 text-blue-500" /> Apostila teórica completa</li>
@@ -671,7 +671,7 @@ export default function App() {
         onClose={() => setActiveUpsell(null)}
         title="🎉 Espere! Antes de finalizar sua compra..."
         message="Você está quase garantindo a versão básica. Mas neste momento foi liberada para você uma condição especial do Plano Completo PRF 2026."
-        oldPrice="R$ 22,00"
+        oldPrice="R$ 26,00"
         newPrice="R$ 18,90"
         upgradeLink="https://pay.cakto.com.br/3cvnueu"
         basicLink="https://pay.cakto.com.br/37jhkgf"
