@@ -245,16 +245,79 @@ export default function App() {
             </div>
           </div>
 
-          <div className="lg:col-span-5 relative flex justify-center">
-            {/* Mockup Image */}
-            <div className="relative w-full max-w-[400px] aspect-[3/4] rounded-2xl shadow-2xl overflow-hidden border-8 border-white/20">
-              <img 
-                src="https://i.ibb.co/B5yLqdZ8/C-pia-de-Capa-de-Livro-Infantil-Ilustrado-Vibrante-PCD-Inclusivo-1.png" 
-                alt="PRF Agente Administrativo Cover" 
-                className="w-full h-full object-cover"
-                referrerPolicy="no-referrer"
-              />
+          <div className="lg:col-span-5 relative flex justify-center py-12">
+            {/* 3D Book Mockup */}
+            <div className="relative group" style={{ perspective: '1500px' }}>
+              <div 
+                className="relative w-[280px] md:w-[320px] aspect-[3/4] transition-transform duration-700 ease-out"
+                style={{ 
+                  transformStyle: 'preserve-3d',
+                  transform: 'rotateY(-25deg) rotateX(5deg)',
+                }}
+              >
+                {/* Book Spine */}
+                <div 
+                  className="absolute top-0 bottom-0 w-[40px] bg-[#001a33] border-r border-white/10 flex items-center justify-center overflow-hidden"
+                  style={{ 
+                    left: '-20px',
+                    transform: 'rotateY(-90deg)',
+                    transformOrigin: 'right',
+                    boxShadow: 'inset -10px 0 20px rgba(0,0,0,0.5)'
+                  }}
+                >
+                  <span className="text-[10px] font-black text-white/80 uppercase tracking-widest whitespace-nowrap rotate-180" style={{ writingMode: 'vertical-rl' }}>
+                    POLÍCIA RODOVIÁRIA FEDERAL - AGENTE ADMINISTRATIVO
+                  </span>
+                </div>
+
+                {/* Book Front Cover */}
+                <div 
+                  className="absolute inset-0 bg-white rounded-r-lg shadow-2xl overflow-hidden"
+                  style={{ 
+                    transform: 'translateZ(20px)',
+                    boxShadow: '15px 15px 40px rgba(0,0,0,0.5)'
+                  }}
+                >
+                  <img 
+                    src="https://i.ibb.co/B5yLqdZ8/C-pia-de-Capa-de-Livro-Infantil-Ilustrado-Vibrante-PCD-Inclusivo-1.png" 
+                    alt="PRF Agente Administrativo Cover" 
+                    className="w-full h-full object-cover"
+                    referrerPolicy="no-referrer"
+                  />
+                  {/* Glossy effect */}
+                  <div className="absolute inset-0 bg-gradient-to-tr from-white/0 via-white/5 to-white/20 pointer-events-none"></div>
+                </div>
+
+                {/* Book Pages (Side) */}
+                <div 
+                  className="absolute top-0 bottom-0 right-0 w-[40px] bg-[#f5f5f5]"
+                  style={{ 
+                    transform: 'rotateY(90deg) translateZ(20px)',
+                    transformOrigin: 'right',
+                    backgroundImage: 'linear-gradient(90deg, transparent 0%, rgba(0,0,0,0.05) 50%, transparent 100%)',
+                    backgroundSize: '4px 100%'
+                  }}
+                ></div>
+
+                {/* Book Bottom */}
+                <div 
+                  className="absolute left-0 right-0 bottom-0 h-[40px] bg-[#e5e5e5]"
+                  style={{ 
+                    transform: 'rotateX(-90deg) translateZ(20px)',
+                    transformOrigin: 'bottom',
+                    backgroundImage: 'linear-gradient(0deg, transparent 0%, rgba(0,0,0,0.05) 50%, transparent 100%)',
+                    backgroundSize: '100% 4px'
+                  }}
+                ></div>
+              </div>
+
+              {/* Shadow on the floor */}
+              <div 
+                className="absolute -bottom-10 left-1/2 -translate-x-1/2 w-[120%] h-10 bg-black/40 blur-2xl rounded-full -z-10"
+                style={{ transform: 'rotateX(80deg)' }}
+              ></div>
             </div>
+
             {/* Decorative elements */}
             <div className="absolute -top-10 -right-10 w-32 h-32 bg-yellow-400/20 blur-3xl rounded-full"></div>
             <div className="absolute -bottom-10 -left-10 w-40 h-40 bg-blue-400/20 blur-3xl rounded-full"></div>
